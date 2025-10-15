@@ -3,79 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Registration Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #registrationform {
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            border: 10px;
+        }
+        
+        #personalinfo, #additionalinfo, #courseinfo {
+            border: 5px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        #personallegend, #additionallegend, #courselegend {
+            font-weight: bold;
+            padding: 0 10px;
+            color: #333;
+        }
+        
+        #formtable {
+            width: 100%;
+        }
+        
+        #formtable tr {
+            margin-bottom: 10px;
+        }
+        
+        #formtable td {
+            padding: 8px 0;
+        }
+        
+        
+        #firstname, #middleinitial, #lastname,
+        #dob, #age,
+        #street, #city, #region, #postal,
+        #email, #password,
+        #phone {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        #male, #female, #other {
+            margin-right: 5px;
+        }
+        
+        #nameinputs {
+            gap: 5px;
+        }
+        
+        
+        #emailinputs {
+            gap: 5px;
+        }
+        
+        
+        #courseselect {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        #bio {
+            width: 400%;
+            padding: 8px;
+            border: 5px solid #ccc;
+            min-height: 100px;
+        }
+        
+        #submitbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        
+        #interestsgroup {
+            margin: 10px 0;
+        }
+        
+        #gendergroup {
+            margin: 10px 0;
+        }
+        
 
+    </style>
 </head>
 <body>
+    <form id="registration-form">
+        <fieldset id="personalinfo">
+            <legend id="personal-legend">Personal Information</legend>
 
-<form>
-    <fieldset>
-        <legend><h3>Personal Information</h3></legend>
+            <table id="formtable">
+                <tr>
+                    <td class="required">Full Name</td>
+                    <td>
+                        <div id="nameinputs">
+                            <input type="text" id="firstname" placeholder="First Name" required>
+                            <input type="text" id="middleinitial" placeholder="Middle Initial">
+                            <input type="text" id="lastname" placeholder="Last Name" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required">Date of Birth</td>
+                    <td>
+                        <input type="date" id="dob" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required">Age</td>
+                    <td>
+                        <input type="number" id="age" min="18" max="100" placeholder="Enter your age" required>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
 
-        <table>
-            <tr>
-                <td>Full Name</td>
-                <td>
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Middle intial">
-                    <input type="text" placeholder="Last Name">
-                </td>
-            </tr>
-            <tr>
-                <td>Date of Birth</td>
-                <td>
-                    <input type="date" required>
-                </td>
-            </tr>
+        <fieldset id="additionalinfo">
+            <legend id="additionallegend">Additional Info</legend>
+
+            <table id="formtable">
+                <tr>
+                    <td class="required">Gender</td>
+                    <td>
+                        <div id="gendergroup">
+                            <input type="radio" id="male" name="gender" required> Male
+                            <input type="radio" id="female" name="gender" required> Female
+                            <input type="radio" id="other" name="gender" required> Other
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="required">Address</td>
+                    <td>
+                        <div id="addressinputs">
+                            <input type="text" id="street" placeholder="Street Address" required>
+                            <input type="text" id="city" placeholder="City" required>
+                            <input type="text" id="region" placeholder="Region" required>
+                            <input type="number" id="postal" placeholder="Postal Code" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required">Email</td>
+                    <td>
+                        <input type="email" id="email" placeholder="harHAr@gmail.com" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required">Password</td>
+                    <td>
+                        <input type="password" id="password" placeholder="Password" minlength="6" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required">Phone Number</td>
+                    <td>
+                        <input type="tel" id="phone" placeholder="###-###-####" required>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset id="courseinfo">
+            <legend id="courselegend">Course</legend>
             
-        </table>
-    </fieldset>
-
-    <fieldset>
-        <legend><b>Additional Info</b></legend>
-
-        <table>
-            <tr>
-                <td>Gender</td>
-                <td>
-                    <input type="radio" name="gender" required>Male
-                    <input type="radio" name="gender" required>Female
-                    <input type="radio" name="gender" required>Others
-                </td>
-            </tr>
-
-
-            <tr>
-                <td>Address</td>
-                <td>
-                    <input type="text" placeholder="Street Address" required>
-                    <input type="text" placeholder="City" required>
-                    <input type="text" placeholder="Region" required>
-                    <input type="number" placeholder="Postal code" required>
-                </td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>
-                    <input type="text" placeholder="*****@gmail.com" required>
-                    <input type="password" placeholder="Password">
-                </td>
-            </tr>
-            <tr>
-                <td>Phone Number</td>
-                <td>
-                    <input type="number" placeholder="### ### ####">
-                </td>
-            </tr>
-        </table>
-    </fieldset>
-
-    <fieldset>
-        <legend>Course</legend>
-
-    </fieldset>
-</form>
-
-
+            <table id="form-table">
+                <tr>
+                    <td class="required">Select Course</td>
+                    <td>
+                        <select id="courseselect" required>
+                            <option value="" disabled selected>Please select a course</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="it">Information Technology</option>
+                            <option value="eng">Engineering</option>
+                            <option value="bus">Business Administration</option>
+                            <option value="art">Arts and Humanities</option>
+                        </select>
+                    </td>
+                </tr>
+ 
+                <tr>
+                    <td>Short Bio</td>
+                    <td>
+                        <textarea id="bio" placeholder="Tell us a bit about yourself..."></textarea>
+                    </td>
+                </tr>
+            </table>
+            
+            <button type="submit" id="submitbtn">Submit Registration</button>
+        </fieldset>
+    </form>
 </body>
 </html>
