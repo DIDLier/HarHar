@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            width: 100%;
+            height: 500px;
+            background: url(TEXAS-IMAGES/photo-1509316785289-025f5b846b35.jfif);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding-top: 150px;
+        }
+
+        .LoneStar {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        
+        .STATE {
+            font-size: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #BF0A30;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        nav {
+            padding: 20px;
+            background-color: #002868;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #BF0A30;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 100px;
+        }
+
+        /* Main sections */
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #002868;
+            margin-bottom: 30px;
+        }
+
+        /* Destinations and Articles boxes */
+        .destination-box, .articles-box {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .destination-inside, .article-inside {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 350px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .destination-image, .article-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .destination-content, .article-content {
+            padding: 20px;
+        }
+
+        .destination-content h3, .article-content h3 {
+            color: #002868;
+            margin-bottom: 10px;
+        }
+
+        /* Read More link styling */
+        .read-more {
+            color: #002868;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            color: #BF0A30;
+        }
+
+        footer {
+            background-color: #002868;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="STATE">TEXAS</div>
+        <h1 class="LoneStar">THE LONE STAR STATE</h1>
+        <p class="LoneStar">From big cities to wide open spaces, Texas offers larger-than-life experiences and southern hospitality.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Finals-Assignment2.html">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#articles">Articles</a></li>
+        </ul>
+    </nav>
+
+    <main class="Main1">
+        <section id="destinations">
+            <h2>Top Places to Visit</h2>
+
+            <div class="destination-box">
+                <div class="destination-inside">
+                    <div class="destination-image" style="background-image: url(TEXAS-IMAGES/View_of_Downtown_Austin_from_Pfluger_Pedestrian_Bridge_October_2022.jpg)"></div>
+                    <div class="destination-content">
+                        <h3>Austin</h3>
+                        <p>Experience the live music capital of the world with its vibrant food scene, outdoor activities, and unique culture.</p>
+                    </div>
+                </div>
+
+                <div class="destination-inside">
+                    <div class="destination-image" style="background-image: url(TEXAS-IMAGES/HERO\ 1_Getty_525182377_State_Texas_SanAntonio.jpg)"></div>
+                    <div class="destination-content">
+                        <h3>San Antonio</h3>
+                        <p>Visit the historic Alamo, stroll along the beautiful River Walk, and experience rich Spanish heritage.</p>
+                    </div>
+                </div>
+
+                <div class="destination-inside">
+                    <div class="destination-image" style="background-image: url(TEXAS-IMAGES/Canyon\,_Rio_Grande\,_Texas.jpeg)"></div>
+                    <div class="destination-content">
+                        <h3>Big Bend National Park</h3>
+                        <p>Explore the rugged beauty of West Texas with stunning desert landscapes, canyons, and the Rio Grande.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        <section id="articles">
+            <h2>Texas Articles</h2>
+
+            <div class="articles-box">
+                <div class="article-inside">
+                    <div class="article-image" style="background-image: url(TEXAS-IMAGES/images.jfif)"></div>
+                    <div class="article-content">
+                        <h3>Texas Hill Country</h3>
+                        <p>Discover the beautiful rolling hills, wineries, and charming small towns in the heart of Central Texas.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="article-inside">
+                    <div class="article-image" style="background-image: url(TEXAS-IMAGES/siesta-key-florida_FLBEACH0123-6b690127037c4091bd6193c3e1934d09.jpg)"></div>
+                    <div class="article-content">
+                        <h3>Gulf Coast Beaches</h3>
+                        <p>Explore the sandy shores and coastal towns along Texas' beautiful Gulf of Mexico coastline.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="article-inside">
+                    <div class="article-image" style="background-image: url(TEXAS-IMAGES/media_gallery-2016-06-23-8-intro_aa79b78aa6133df59e1f7d03f4b3502c.jpg)"></div>
+                    <div class="article-content">
+                        <h3>Texas BBQ Trail</h3>
+                        <p>Follow the ultimate food journey through Texas' best barbecue joints and smokehouses.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Nile Yhujhi D. Bayong. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>
